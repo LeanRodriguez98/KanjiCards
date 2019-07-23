@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ReadTxt : MonoBehaviour {
+    public static ReadTxt instance;
     [System.Serializable]
-    public struct KanjiCard
+    public struct KanjiCardData
     {
         public int id;
         public string kanji;
@@ -13,26 +13,31 @@ public class ReadTxt : MonoBehaviour {
         public string translate;
     }
     public TextAsset kanjiList;
-    public List<KanjiCard> kards;
-    // Use this for initialization
-    void Start()
+    public List<KanjiCardData> cards;
+    private void Awake()
     {
-        kards = new List<KanjiCard>();
+        instance = this;
+
+        cards = new List<KanjiCardData>();
         string[] data = kanjiList.text.Split(new char[] { '\n' });
         for (int i = 1; i < data.Length - 1; i++)
         {
             string[] row = data[i].Split(new char[] { ',' });
             if (row[1] != "")
             {
-                KanjiCard k;
+                KanjiCardData k;
                 int.TryParse(row[0], out k.id);
                 k.kanji = row[1];
                 k.furigana = row[2];
                 k.translate = row[3];
-                kards.Add(k);
+                cards.Add(k);
             }
-    
+
         }
+    }
+    void Start()
+    {
+       
     }
 
  
