@@ -185,6 +185,10 @@ Prefab:
       propertyPath: colorMin.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1733289766624924, guid: 4ca1679f59738414ba176b2992042c80, type: 2}
+      propertyPath: m_Name
+      value: Spectrum
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ca1679f59738414ba176b2992042c80, type: 2}
   m_IsPrefabAsset: 0
@@ -307,8 +311,9 @@ GameObject:
   m_Component:
   - component: {fileID: 309674667}
   - component: {fileID: 309674666}
+  - component: {fileID: 309674668}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323,7 +328,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cc3ccdd31fd1cdd41bcd284e738d0725, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5e07f85638a3d5542b216c2b4ab26b87, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -422,6 +427,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &309674668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309674665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5da0a388a868d43a4d221f88b6c44b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 5e07f85638a3d5542b216c2b4ab26b87, type: 3}
+  - {fileID: 8300000, guid: 57ea4a54d96a029468eb8e99f420a6af, type: 3}
+  - {fileID: 8300000, guid: 9671ab11de09ab849ba2c84ebc9d62fc, type: 3}
+  - {fileID: 8300000, guid: 5b04518dc0982f9419e16e0c5f1ed804, type: 3}
+  - {fileID: 8300000, guid: 2ca3643d93d557147ae72ab1806c2432, type: 3}
+  - {fileID: 8300000, guid: f526b88f17301e944b2b98d67aca84be, type: 3}
+  - {fileID: 8300000, guid: 1e1cdff966c6a6a4799380bb90949c70, type: 3}
+  - {fileID: 8300000, guid: 0a7958327a74e794c9ed301825a1bdca, type: 3}
+  - {fileID: 8300000, guid: 4c21941da8d33a345989109a57e39aca, type: 3}
+  - {fileID: 8300000, guid: ba80c5df85b55544eaf7289d86342bea, type: 3}
+  - {fileID: 8300000, guid: ea5d560cc94557d4a9825d43d18c7b75, type: 3}
+  - {fileID: 8300000, guid: 0f4ae89f501e6764d915d81a2bd84ce9, type: 3}
+  - {fileID: 8300000, guid: 7841c29edfd3d7b47b36214b6fd058a0, type: 3}
+  - {fileID: 8300000, guid: 3534a9934873cc54fae48aaa65b5d08a, type: 3}
+  - {fileID: 8300000, guid: 1bea59c024f194f488a0edf4e4af6f84, type: 3}
+  - {fileID: 8300000, guid: d734c50f266644c4c9590e136d5093e9, type: 3}
+  - {fileID: 8300000, guid: 19f351c7195868841aaa1d9129ecf984, type: 3}
 --- !u!1 &343355087
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +468,7 @@ GameObject:
   - component: {fileID: 343355090}
   - component: {fileID: 343355089}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ShowAnswerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -858,7 +892,7 @@ GameObject:
   - component: {fileID: 1131407203}
   - component: {fileID: 1131407202}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: NextKanjiButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
